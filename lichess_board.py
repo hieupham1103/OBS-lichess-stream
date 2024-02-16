@@ -12,14 +12,16 @@ CUSTOM_CSS_BOARD = """#top{
 }
 
 body{
-  background: green;
+  background: rgba(76, 175, 80, 0);
   overflow: hidden;
 }
 
 .main-board{
   height: 100vh;
   width: 100vh;
-}"""
+}
+
+"""
 
 CUSTOM_CSS_TIMER = """#top{
   display: none;
@@ -32,10 +34,9 @@ CUSTOM_CSS_TIMER = """#top{
 }
 
 body{
-  background: green;
+  background: rgba(76, 175, 80, 0);
   overflow: hidden;
 }
-
 
 """
 
@@ -168,6 +169,8 @@ def update_board(board, url, css):
     source = obs.obs_get_source_by_name(board)
     
     if source is not None:
+        data = obs.obs_data_get_json(obs.obs_source_get_settings(source))
+        print(data)
         settings = obs.obs_data_create()
         obs.obs_data_set_string(settings, "url", url)
         obs.obs_data_set_string(settings, "css", css)
