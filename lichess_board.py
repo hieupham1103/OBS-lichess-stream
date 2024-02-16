@@ -71,7 +71,7 @@ def script_properties():
         props,
         "white_source",
         "White Chess Board",
-        obs.OBS_COMBO_TYPE_LIST,
+        obs.OBS_COMBO_TYPE_EDITABLE,
         obs.OBS_COMBO_FORMAT_STRING,
     )
     sources = obs.obs_enum_sources()
@@ -87,7 +87,7 @@ def script_properties():
         props,
         "black_source",
         "Black Chess Board",
-        obs.OBS_COMBO_TYPE_LIST,
+        obs.OBS_COMBO_TYPE_EDITABLE,
         obs.OBS_COMBO_FORMAT_STRING,
     )
     sources = obs.obs_enum_sources()
@@ -104,7 +104,7 @@ def script_properties():
         props,
         "white_timer",
         "White Timer",
-        obs.OBS_COMBO_TYPE_LIST,
+        obs.OBS_COMBO_TYPE_EDITABLE,
         obs.OBS_COMBO_FORMAT_STRING,
     )
     sources = obs.obs_enum_sources()
@@ -119,7 +119,7 @@ def script_properties():
         props,
         "black_timer",
         "Black Timer",
-        obs.OBS_COMBO_TYPE_LIST,
+        obs.OBS_COMBO_TYPE_EDITABLE,
         obs.OBS_COMBO_FORMAT_STRING,
     )
     sources = obs.obs_enum_sources()
